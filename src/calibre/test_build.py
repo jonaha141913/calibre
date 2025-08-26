@@ -99,6 +99,7 @@ class BuildTest(unittest.TestCase):
         import lzma
         lzma.open
 
+    @unittest.skipUnless(has_optional_dependency('pyzstd'), 'pyzstd is not installed')
     def test_zstd(self):
         from pyzstd import compress, decompress
         data = os.urandom(4096)

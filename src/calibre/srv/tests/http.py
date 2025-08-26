@@ -200,7 +200,7 @@ class TestHTTP(BaseTest):
             self.ae(r.read(), b'Requested resource not found')
 
             # Test 500
-            server.change_handler(lambda data:1/0)
+            server.change_handler(lambda data: 1/0)
             conn = server.connect()
             conn.request('GET', '/test/')
             r = conn.getresponse()
