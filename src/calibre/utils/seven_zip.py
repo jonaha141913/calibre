@@ -33,7 +33,8 @@ class Writer:
 
 def read_file(archive, name):
     w = Writer()
-    archive.extract(targets=[name], factory=w)
+    with archive:
+        archive.extract(targets=[name], factory=w)
     for v in w.outputs.values():
         return v.getvalue()
     raise KeyError(f'No file named {name} in archive')
