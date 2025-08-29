@@ -657,7 +657,7 @@ class Build(Command):
         cwd = os.getcwd()
         os.chdir(bdir)
         try:
-            self.check_call(cmd + ['-S', os.path.dirname(sources[0])])
+            self.check_call(cmd + ['-S', os.path.dirname(sources[0]), '-DBUILD_QT_PRIVATE=OFF'])
             self.check_call([self.env.make] + [f'-j{cpu_count or 1}'])
         finally:
             os.chdir(cwd)

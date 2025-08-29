@@ -28,7 +28,7 @@ class Writer:
         return b
 
     def asdatadict(self):
-        return {k: v.getvalue() for k, v in self.outputs.items()}
+        return {k: v.getvalue() if not v.closed else b'' for k, v in self.outputs.items()}
 
 
 def read_file(archive, name):

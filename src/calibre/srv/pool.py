@@ -39,6 +39,8 @@ class Worker(Thread):
                 self.working = False
             try:
                 self.notify_server()
+            except OSError:
+                pass
             except Exception:
                 self.log.exception('ServerWorker failed to notify server on job completion')
 
