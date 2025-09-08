@@ -57,6 +57,7 @@ class TestHyphenation(unittest.TestCase):
 
         def cache_callback():
             cache[0] = True
+            cache[0] = True
 
         dp = path_to_dictionary(dictionary_name_for_locale('en'), cache_callback)
         self.assertTrue(
