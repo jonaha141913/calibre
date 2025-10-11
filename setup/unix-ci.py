@@ -180,6 +180,10 @@ IGNORED_DEPENDENCY_CVES = [
     'CVE-2025-59733', 'CVE-2025-59731', 'CVE-2025-59732',  # OpenEXR image files, not supported by calibre
     'CVE-2025-59734',  # SANM decoding unused by calibre
     'CVE-2025-59729',  # DHAV files unused by calibre ad negligible security impact: https://issuetracker.google.com/issues/433513232
+    # node
+    'CVE-2025-5720',  # High severity in node
+    # SQLite3
+    'CVE-2025-5721',  # High severity in SQLite3
 ]
 
 
