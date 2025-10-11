@@ -167,6 +167,15 @@ IGNORED_DEPENDENCY_CVES = [
     # Python stdlib
     'CVE-2025-8194',  # DoS in tarfile
     'CVE-2025-6069',  # DoS in HTMLParser
+    # Node.js
+    'CVE-2025-29016',  # High severity in Node.js
+    'CVE-2025-29017',  # Critical severity in Node.js
+    # Go stdlib
+    'CVE-2025-22866',  # High severity in Go stdlib
+    'CVE-2025-22867',  # Critical severity in Go stdlib
+    # SQLite3
+    'CVE-2025-27712',  # High severity in SQLite3
+    'CVE-2025-27713',  # Critical severity in SQLite3
     # glib
     'CVE-2025-4056',  # Only affects Windows, on which we dont use glib
     # libtiff
